@@ -46,4 +46,11 @@ public class EbaySearchResultActions {
 			System.out.println("Brand not found");
 		}
 	}
+	
+	public void selectCottonTee(){
+		EbaySearchResultLocatorsObj.linkShirtItems.click();
+	}
 }
+
+
+
