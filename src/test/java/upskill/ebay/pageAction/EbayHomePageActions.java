@@ -16,7 +16,7 @@ import upskill.utilities.SetupDrivers;
 public class EbayHomePageActions {
 	
 	EbayHomePageLocators EbayHomePageLocatorsObj;
-
+	
 	public EbayHomePageActions(){
 		EbayHomePageLocatorsObj = new EbayHomePageLocators();
 		PageFactory.initElements(SetupDrivers.driver, EbayHomePageLocatorsObj);
@@ -24,8 +24,23 @@ public class EbayHomePageActions {
 	
 	public void searchShoes(){
 		EbayHomePageLocatorsObj.txtbxSearch.sendKeys("Shoes");
+		
 //		EbayHomePageLocatorsObj.btnSearch.click();
-		EbayHomePageLocatorsObj.btnSearch.sendKeys(Keys.ENTER);
+		
+		JavascriptExecutor js = (JavascriptExecutor)SetupDrivers.driver;	//Creating JS object	
+//		js.executeScript("EbayHomePageLocatorsObj.btnSearch.click();");
+		
+		js.executeScript("arguments[0].click();", EbayHomePageLocatorsObj.btnSearch);
+	}
+	
+	public void searchShirt(){
+		EbayHomePageLocatorsObj.txtbxSearch.sendKeys("Shirts");
+		EbayHomePageLocatorsObj.btnSearch.click();
+	}
+	
+	public void searchPent(){
+		EbayHomePageLocatorsObj.txtbxSearch.sendKeys("Pants");
+		EbayHomePageLocatorsObj.btnSearch.click();
 	}
 	
 	public void searchCottonTee(){
@@ -35,21 +50,26 @@ public class EbayHomePageActions {
 	
 	public void searchItems(String items){
 		EbayHomePageLocatorsObj.txtbxSearch.sendKeys(items);
-		EbayHomePageLocatorsObj.btnSearch.click();
+//		EbayHomePageLocatorsObj.btnSearch.click();
+		EbayHomePageLocatorsObj.btnSearch.sendKeys(Keys.ENTER);
 	}
 	
-	public void mouseHoverMyEbay() throws Exception{
+	
+	public void mouseHoverEbay() throws Exception{
+		
 		Actions actions = new Actions(SetupDrivers.driver);
 		actions.moveToElement(EbayHomePageLocatorsObj.linkMyEbay);
 		actions.perform();
 		Thread.sleep(2000);
 	}
 	
+	
 	public void clickSummary() throws Exception{
 		EbayHomePageLocatorsObj.linkSummary.isEnabled();
 		EbayHomePageLocatorsObj.linkSummary.click();
 		Thread.sleep(2000);
 	}
+	
 	
 	public void synchronization(){
 		/*	Selenium Wait : 
@@ -108,6 +128,6 @@ public class EbayHomePageActions {
 		
 		js.executeScript("arguments[0].scrollIntoView();", EbayHomePageLocatorsObj.btnSearch);  //Scroll to a object
 		
-		js.executeScript("window.scrollBy(0,document.body.scrollHeight)"); //Scroll down to bottom of website
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)"); //Scroll down to bottom of website
 	}
 }

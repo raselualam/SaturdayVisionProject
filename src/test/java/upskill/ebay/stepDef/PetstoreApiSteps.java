@@ -7,25 +7,26 @@ import upskill.api.restassured.PetstoreRestAssuredActions;
 
 public class PetstoreApiSteps {
 	
-	PetstoreRestAssuredActions PetstoreRestAssuredActionsobj = new PetstoreRestAssuredActions();
-	
+	PetstoreRestAssuredActions PetstoreRestAssuredActionsObj = new PetstoreRestAssuredActions();
+
 	@Given("^Create pet$")
 	public void create_pet() throws Throwable {
-		PetstoreRestAssuredActionsobj.createPet();
+		PetstoreRestAssuredActionsObj.createPet();
 	}
 
 	@Given("^Get pet$")
 	public void get_pet() throws Throwable {
-		PetstoreRestAssuredActionsobj.getPet();
+		PetstoreRestAssuredActionsObj.getPet();
 	}
 
 	@When("^Update pet$")
 	public void update_pet() throws Throwable {
-		PetstoreRestAssuredActionsobj.updatePet();
+		PetstoreRestAssuredActionsObj.updatePet();
 	}
 
 	@Then("^Delete pet$")
 	public void delete_pet() throws Throwable {
-		PetstoreRestAssuredActionsobj.deletePet();
+		PetstoreRestAssuredActionsObj.deletePet();
 	}
+	
 }

@@ -8,15 +8,26 @@ import upskill.ebay.pageAction.EbayHomePageActions;
 public class EbayHomePageSteps {
 	
 	EbayHomePageActions EbayHomePageActionsObj = new EbayHomePageActions();
-
+	
 	@Given("^Open Ebay Homepage$")
 	public void open_Ebay_Homepage() throws Throwable {
-		//Page loading in setup driver class
+		//Wait
 	}
 	
+
 	@When("^Search for shoes$")
 	public void search_for_shoes() throws Throwable {
 		EbayHomePageActionsObj.searchShoes();
+	}
+	
+	@When("^Search for Shirts$")
+	public void search_for_Shirts() throws Throwable {
+		EbayHomePageActionsObj.searchShirt();
+	}
+	
+	@When("^Search for Pants$")
+	public void search_for_Pants() throws Throwable {
+		EbayHomePageActionsObj.searchPent();
 	}
 	
 	@Given("^Search for \"([^\"]*)\"$")
@@ -31,7 +42,7 @@ public class EbayHomePageSteps {
 	
 	@When("^Mouse Hover to MyEbay Summary$")
 	public void mouse_Hover_to_MyEbay_Summary() throws Throwable {
-		EbayHomePageActionsObj.mouseHoverMyEbay();
+		EbayHomePageActionsObj.mouseHoverEbay();
 	}
 
 	@Then("^Click on Summary$")

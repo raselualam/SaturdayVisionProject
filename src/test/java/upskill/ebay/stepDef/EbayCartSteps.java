@@ -7,7 +7,7 @@ import upskill.ebay.pageAction.EbayCartActions;
 public class EbayCartSteps {
 	
 	EbayCartActions EbayCartActionsObj = new EbayCartActions();
-	
+
 	@When("^Select Size$")
 	public void select_Size() throws Throwable {
 		EbayCartActionsObj.switchNewWindow();
@@ -17,7 +17,6 @@ public class EbayCartSteps {
 	@When("^Select Men Size$")
 	public void select_Men_Size() throws Throwable {
 		EbayCartActionsObj.selectMenSizeDD();
-
 	}
 
 	@When("^Select Shade$")

@@ -37,6 +37,11 @@ public class ShettyHomepageActions {
 			}
 		}
 	}
+
+	public void verifyShettyHome() throws Exception{
+		Thread.sleep(3000);
+		ShettyHomepageLocatorsObj.btnHome.isDisplayed();
+	}
 	
 	public void handleIframe(){
 		
@@ -60,9 +65,4 @@ public class ShettyHomepageActions {
 		SetupDrivers.driver.switchTo().frame("inner");
 		SetupDrivers.driver.switchTo().frame("child");
 	} 
-	
-	public void verifyShettyHome() throws Exception{
-		Thread.sleep(3000);
-		ShettyHomepageLocatorsObj.btnHome.isDisplayed();
-	}
 }

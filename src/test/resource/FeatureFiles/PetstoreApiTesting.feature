@@ -6,4 +6,5 @@ Scenario: Pet CRUD API
 	Given Create pet
 	And Get pet
 	When Update pet
-	Then Delete pet
+	Then Get pet
+	And Delete pet

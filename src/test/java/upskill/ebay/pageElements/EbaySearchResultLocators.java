@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class EbaySearchResultLocators {
-
+	
 	//Validate Shoes Items
 	@FindBy(xpath="//span[2][contains(text(), 'Shoes')]")
 	public WebElement txtShoes;
@@ -30,9 +30,7 @@ public class EbaySearchResultLocators {
 	public WebElement cbxBrandUnbranded;
 	
 	//Shirt link
-	@FindBy(xpath="//span[contains(text(),'Big & Tall Cotton Tee. Sizes 4 XLT to 8XLT')]")
+	@FindBy(xpath="//span[contains(text(),'Big & Tall Cotton Tee. Sizes 4 XLT to 8XLT. With')]")
 	public WebElement linkShirtItems;
+	
 }
-
-
-
